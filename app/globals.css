@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  /* Aurora Forest Theme Palette */
+  --background: #F4FAF9;
+  --foreground: #021B17;
+  --primary-dark: #053931;   /* Aurora Forest (#053931) */
+  --primary: #00524D;        /* Deep Forest Teal (#00524D) */
+  --primary-light: #48A89A;  /* Aurora Teal (#48A89A) */
+  --secondary: #48A89A;      /* Aurora Seafoam (#48A89A) */
+  --accent: #CBEFEB;         /* Aurora Ice Mint (#CBEFEB) */
+  --warning: #D64545;        /* Safety Alert Red */
+  --success: #48A89A;        /* Aurora Teal */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(203, 239, 235, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(5, 57, 49, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(203, 239, 235, 0.15);
+}
